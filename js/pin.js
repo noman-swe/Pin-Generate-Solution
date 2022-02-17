@@ -15,6 +15,24 @@ function generatePin(){
   document.getElementById('display-pin').value = pin;
 }
 
+// verifyPin()
+function verifyPin(){
+    const pin = document.getElementById('display-pin').value;
+    const typedNumbers = document.getElementById('typed-numbers').value;
+    
+    const successMsg = document.getElementById('notify-success');
+    const failError = document.getElementById('notify-fail');
+    if(pin == typedNumbers){
+        successMsg.style.display = "block"; 
+        failError.style.display = "none";
+    }else{
+        
+        failError.style.display = "block";
+        successMsg.style.display = "none"; 
+    }
+    
+}
+
 
 // 
 document.getElementById('key-pad').addEventListener('click', function(event){
